@@ -11,7 +11,7 @@ const sendURL = (req, res, next) => {
   result = selectURL(url);
 
   console.log(result.deadlist);
-  writefile(url, deadlist);
+  //writefile(url, deadlist);
   // console.log(result, 'from controller');
 
   res.status(200).send(result);
