@@ -15,7 +15,7 @@ describe('/api', () => {
 describe('/url - endpoint tests', () => {
   it('GET status: 200, responds with an url object having the right properties', () => {
     return request(app)
-      .get('/api/url/https://web-crawler-test1.herokuapp.com/')
+      .get('/api/url/web-crawler-test1.herokuapp.com')
       .expect(200)
       .then(({ body }) => {
         expect(body.result).to.be.an('object');
@@ -25,7 +25,6 @@ describe('/url - endpoint tests', () => {
           'broken',
           'deadlist'
         );
-      })
-      .next(console.log);
+      });
   });
 });
